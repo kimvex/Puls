@@ -1,0 +1,203 @@
+a
+{
+	color: #22BCE0;
+}
+body
+{
+	background: #EEEEEE;
+	font-family: "Arial";
+	font-size: 16px;
+}
+footer
+{
+	background: #22BCE0;
+	text-align: center;
+	color: rgba(255,255,255, 0.7);
+	padding: 1.5em
+}
+/* first-chil sirve para decirle que a la primera etiqueta
+se le de ciertos atributos aunque existan mas etiquetas 
+parecidas dentro del atributo maestro*/
+footer p:first-child
+{
+	margin-bottom: 0;
+}
+/* Funciona igual que el first pero este toma el ultimo*/
+footer p:last-child
+{
+	margin-top: 0;
+}
+footer p:last-child:after
+{
+	content: "- "
+}
+footer p:last-child:before
+{
+	content: " -"
+}
+header
+{
+	background: #343B54;
+	color: #FFFFFF;
+	/* padding es el margen interno de una caja */
+	padding: 0.5em;
+	/*overflow dice que cuando algo este fuera del cuadro
+	que lo esconda con hidden*/
+	/*Si no quiero que las cosas se salgan de su contenedor 
+	uso el overflow:hidden;*/
+	overflow: hidden;
+	position: relative;
+}
+header figure
+{
+	float: left;
+}
+header h1 
+{
+	font-size: 1.2em;
+	/* font-weight: normal; sirve para quitar la negrita que el
+	titulo trae por defecto */
+	font-weight: normal;
+	margin: 0.2em 70px 0 0;
+}
+header #logo img
+{
+	border-right: 1px solid #FFF;
+	width: 52px;
+	margin-right: 0.5em;
+	padding-right: 0.5em;
+}
+header #avatar img
+{
+	margin: 0.5em 0.5em 0 0;
+	position: absolute;
+	border-radius: 50%;
+	width: 55px;
+	top: 0;
+	right: 0;
+}
+nav 
+{
+	background: #80BCA3;
+	margin: 0;
+	padding: 0 0.5em;
+	position: relative;
+}
+nav ul #publicar_nav
+{
+	position: absolute;
+	top: -0.3em;
+	right: 0;
+}
+nav ul #publicar_nav a 
+{
+	border-radius: 5px;
+	background: #22BCE0;
+	font-style: italic;
+	/* arriba abajo*/
+	padding: 0.8em 0.5em;
+	/* text-decoration le quita la decoracion a un texto*/
+	text-decoration: none;
+	/* rgba(color,color,color,transpareancia) izquierda arriba  intensidad dela sombra*/
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	/*box-shadow es igual que text-shadow pero este sirve para la caja*/
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+nav ul 
+{
+	/* list-style: con eso le decimos cual es
+	el estilo de la lista, y con none; le decimos 
+	que no tendra estilos*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li 
+{
+	/*Con display inline-block podemos hacer que las 
+	cajas se alinien*/
+	display: inline-block;
+	/* arriba derecha abajo izquierda*/
+	margin: 0 1em 0 0;
+}
+nav ul li a 
+{
+	color: #fff;
+	display: block;
+	padding: 0.5em 0;
+}
+#contenido
+{
+	margin: 1em;
+}
+#contenido .item
+{
+	background: #fff;
+	border-bottom: 3px solid #22BCE0;
+	min-height: 128px;
+	position: relative;
+	margin-bottom: 3em;
+}
+#contenido .item .imagen_item
+{
+	float: left;
+	margin: 0 1em 0 0;
+}
+#contenido .item .imagen_item img
+{
+	width: 96px;
+}
+#contenido .item .titulo_item
+{
+	font-size: 1.2em;
+	font-style: italic;
+	padding: 1em 1em 0 0;
+	padding: 
+}
+#contenido .item .titulo_item a
+{
+	color: #444;
+	text-decoration: none;
+}
+#contenido .item .autor_item
+{
+	color: #AAA;
+}
+#contenido .item .datos_item
+{
+	text-align: right;
+	margin: 0.3em 1em 0 0;
+}
+#contenido .item .datos_item .tag_item
+{
+	background: #F4502A;
+	border-radius: 0.5em;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	float: left;
+}
+#contenido .item .datos_item .fecha_item
+{
+	color: #AAA;
+}
+
+#contenido .item .votacion 
+{
+	border-radius: 0 0 0.5em 0.5em;
+	position: absolute;
+	background: #fff;
+	top: 100%;
+	width: 90%;
+	left: 5%;
+	margin-top: 3px;
+	padding: 0.2em 0.5em;
+}
+/*Cuando dos clases se separan con , tienen el
+mismo valor*/
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item
+{
+ float: right;
+}
