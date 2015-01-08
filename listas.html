@@ -13,18 +13,51 @@
 		/*list-style-type: none; sirve para quitar las viñetas*/
 		list-style-type: none;
 	}
-	ul li {
+	.m li {
 		padding-left: 17px;
 		background: url(bolaamar.gif) 0em 0.2em no-repeat;
 		margin-bottom: 1em;
 	}
+	#menu ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		width: 200px;
+		font-family: Arial, sans-serif;
+		font-size: 11pt;
+	}
+	#menu ul li {
+		background: #666;
+	}
+	#menu ul li a
+	{
+		color: #ccc;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: block;
+		padding: 10px 10px 10px 20px;
+	}
+	#menu ul li a:hover
+	{
+		background: #000;
+		border-left: 10px solid #333;
+		color: #fff;
+	}
 	</style>
 </head>
 <body>
-<ul>
+<ul class="m">
     <li>Sonata Arctica</li>
     <li>Nightwish</li>
     <li>HIM</li>
 </ul>
+<div id="menu">
+ <ul>
+  <li><a href="..." title="...">Home</a></li>
+  <li><a href="..." title="...">Archivos</a></li>
+  <li><a href="..." title="...">Enlaces</a></li>
+  <li><a href="..." title="...">Acerca de</a></li>
+ </ul>
+</div>
 </body>
 </html>
