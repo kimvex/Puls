@@ -3,13 +3,61 @@
 <head>
 	<meta charset="utf-8">
 	<title>Layout de 2 columnas</title>
+	<link rel="stylesheet" href="normalize.css">
+	<style type="text/css">
+		body {
+ 	   		text-align: center;
+		}
+		#container 
+		{
+			background: green;
+    		width: 700px;
+    		margin: 0px auto;
+    		text-align: left;
+		}
+		#sidebar
+		{
+			background: blue;
+			width: 200px;
+			padding: 10px;
+			float: left;
+		}
+		#main {
+			background: red;
+    		margin-left: 225px;
+		}
+		#footer {
+    		clear: both;
+    		background: yellow;
+		}
+		#header {
+   			background: url(logo.png) top left no-repeat;
+    		width: 400px;
+    		height: 100px;
+    		margin: 0px;
+    		padding: 0px;
+		}
+		#header h1 {
+ 			margin: 0px;
+		}
+		#header a span {
+ 			visibility: hidden;
+		}
+		#header a {
+    		width: 400px;
+    		height: 100px;
+    		display: block;
+    		padding: 0px;
+   		 	margin: 0px;
+    		text-decoration: none;
+		}
+	</style>
 </head>
 <body>
 <div id="container">
     <div id="header">
-        <h1>Título</h1>
-
-        <h2>Subtítulo</h2>
+        <h1><a href ="..." title ="...">
+ 		<span>Título</span></a></h1>
     </div>
     <div id="sidebar">
         <h3>Sección</h3>
