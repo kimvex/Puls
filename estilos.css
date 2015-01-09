@@ -36,10 +36,15 @@
 
 .icon-estrella:before {
 	content: "\e600";
+	color: #FFBE2C;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.1em;
 }
 
 .icon-lapiz:before {
 	content: "\e908";
+	margin-right: 0.8em;
 }
 
 .icon-f-arriba:before {
@@ -48,6 +53,7 @@
 
 .icon-f-abajo:before {
 	content: "\ea43";
+	color: #DD4F24;
 }
 a
 {
@@ -131,7 +137,7 @@ nav
 {
 	background: #7488CD; /*#80BCA3*/
 	margin: 0;
-	padding: 0 0.5em;
+	padding: 0 6em 0 0;
 	position: relative;
 }
 nav ul #publicar_nav
@@ -244,6 +250,14 @@ nav ul li a
 	left: 5%;
 	margin-top: 3px;
 	padding: 0.2em 0.5em;
+}
+#contenido .item .votacion .down
+{
+	text-decoration: none;
+}
+#contenido .item .votacion a
+{
+	text-decoration: none;
 }
 /*Cuando dos clases se separan con , tienen el
 mismo valor*/
