@@ -337,6 +337,7 @@ mismo valor*/
 .formulario{
 	padding: 1em;
 	text-align: right;
+	display: none;
 }
 .formulario input{
 	border: 1px solid #CCC;
@@ -350,5 +351,4 @@ mismo valor*/
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 	color: #fff;
-	display: none;
 }
