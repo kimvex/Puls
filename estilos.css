@@ -9,6 +9,9 @@
     font-style: normal;
 
 }*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fuentes/icomoon.eot?-xgy80z');
@@ -212,6 +215,7 @@ nav ul li a
 	display: block;
 	padding: 0.5em 0;
 	-webkit-transition: .2s;
+	text-decoration: none;
 }
 aside{
 	display: none;

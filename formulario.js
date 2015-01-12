@@ -30,6 +30,7 @@ function agregarPost(){
 	$clone.hide();
 
 	//prepend agrega el clon de primer lugar en el html
+	/*append agrega el clon al final*/
 	$list.prepend($clone);
 
 	//fadeIn() Nos crea una animacion a la hora de agregar el clon
@@ -39,5 +40,8 @@ function agregarPost(){
 	return false;
 }
 //Eventos
-$button.click(mostrarFormulario)
+$button.click(mostrarFormulario);
 $form.on("submit", agregarPost);
+
+/*$('h1').html('Hola como estas'); Esto hace que se modifique el html
+de la propiedad que hemos elegido pddemos agregar tambien etiquetas*/
