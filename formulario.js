@@ -17,9 +17,9 @@ function agregarPost(){
 	var url = $url.val(),//sera igaul al contenido del campo url
 		titulo = $titulo.val(),//sera igual al contenido del campo titulo
 		//clone() nos clona el elemento que le decimos, o primer clon
-		$clone = $post.clone();
+		clone = $post.clone();
 	//find es un selector que busca todos los que se parescan en css
-	$clone.find(".titulo_item a")
+	clone.find(".titulo_item a")
 		//.text seleccionamos el texto
 		.text(titulo)
 		//attr seleccionamos la url y attr significa atributo
@@ -28,15 +28,18 @@ function agregarPost(){
 	/*$clone.find(".datos_item .tag_item")
 		.text(titulo)*/
 	//Ocultamos el clon
-	$clone.hide();
+	clone.hide();
 
 	//prepend agrega el clon de primer lugar en el html
 	/*append agrega el clon al final*/
 	$list.prepend(clone);
 
 	mostrarFormulario()
+    /*Limpiamos los campos*/
+    $titulo.val('');
+    $url.val('');
 
-	clone.sliderDown();
+	clone.slideDown();
 	//fadeIn() Nos crea una animacion a la hora de agregar el clon
 	//$clone.fadeIn();
 	/*return false; Con este evitamos que la pagina se recargue para intentar
