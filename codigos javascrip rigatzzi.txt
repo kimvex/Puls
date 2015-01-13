@@ -1,0 +1,57 @@
+document.getElementByTagName('');
+Eso nos devuelve un array de la etiqueta que elegimos.
+con Jquery seria de la siguiente forma
+$('')
+Los tag los podemos legir de la misma manera que en css
+ejemplo: $('#publicar_nav')
+
+Para elegir un tag y ademas de el tambien quiero a los que lo acompañan seria 
+de la siguiente manera:
+$('#publicar_nav').siblings();
+Y para elegir al que contiene al elemento elegido seria:
+$('#publicar_nav').parent()
+y tambien se puede elguir contenerdor por cascada ejemplo:
+$('#publicar_nav').parent().parent()
+pero hay una forma mucho mas facil de hacer y es de la siguiente manera:
+$('publicar_nav').parents()
+Esto lo que hace es darnos contenedor del contenedor del contenedos, es subir
+en jerarquia.
+para elegit todos los elemntos que sean el contenedor parecido al que elegimos
+solo ponemos (ejemplo):
+$('publicar_nav').parents('nav')
+Esto nos daria todos los nav que existen en el documento.
+Para poder elegir los tag hijos del elemento que elegimos y esto es para demostrar que podemos encadenar ordenes en otras ordenes.
+$('publicar_nav').parents('nav').children();
+
+Una forma para poder cambiar los atributos de los lementos usando javascript, y en este caso con Jquery seria de la siguiente manera:
+$('.item').first().attr('style', 'background: red')
+en este caso .item es tag selccionado por su clase(class) first es para decir que es el primero en caso de que hayan mas con esa clase, attr es para elegir el 
+atributo.
+
+Una forma mucho mas facil es de la siguiente manera:
+$('.item').first().css('background', 'red')
+
+Para agregar una clase a un atributo lo podemos hacer usando Jquery, pero claro ya debemos tener hecho el css que asignaremos.
+Ejemplo del css:
+#publicar_nav a.disabled{
+	
+}
+Ahora usando Jquery podemos agregar esa nueva classe al atributo:
+$('publicar_nav a').addClass(disabled);
+y para poder elimniar esa clase que gregamos solo colocamos
+$('publicar_nav a').removeClass(disabled);
+
+Una forma mucho mas facil es la siguuiente para no estar usando esas dos seria:
+$('publicar_nav a').toggleClass(disabled);
+
+Podemos cambiar el html usando solo javascript, leseccionas el tag que desas modificar:
+$('h1').html('Hey, que lindo es Puls4');
+
+localStorage sirve para crear sesiones
+igual que sessionStorage este cuando el navegador se cierra la conexion se termina.
+la practicidad la podemos mejorar agregando esos dos a variables.
+
+para guardar información con Storage se haria de la siguiente manera:
+variable.setItem('nombre', 'benjamin');
+para eliminar un registro del storage es de la siguiente forma:
+variable.removeItem('edad')

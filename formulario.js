@@ -33,8 +33,10 @@ function agregarPost(){
 	//prepend agrega el clon de primer lugar en el html
 	/*append agrega el clon al final*/
 	$list.prepend(clone);
+
 	mostrarFormulario()
-	clone.sliderDown()
+
+	clone.sliderDown();
 	//fadeIn() Nos crea una animacion a la hora de agregar el clon
 	//$clone.fadeIn();
 	/*return false; Con este evitamos que la pagina se recargue para intentar
