@@ -20,7 +20,7 @@ function agregarPost(){
 		clone = $post.clone();
 	//find es un selector que busca todos los que se parescan en css
 	clone.find(".titulo_item a")
-		//.text seleccionamos el texto
+		//.text seleccionamos el texto*
 		.text(titulo)
 		//attr seleccionamos la url y attr significa atributo
 		.attr("href", url);
