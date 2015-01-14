@@ -5,15 +5,31 @@ var $form = $("#formulario"),
 	$list = $("#contenido"),
 	$post = $(".item").first();
 
-function mostrarFormulario () {
+if(localStorage.getItem('autosave')){
+	$titulo.val(sessionStorage.getItem('titulo'));
+	$url.val(sessionStorage.getItem('url'));
+}
+
+/*setInterval Recibe 2 parametros, una funcion que se va ajecutar y los
+milisegundos que tardara para volverse a ejecutar esa funcion.*/
+var id = setInterval(function(){
+	sessionStorage.setItem('titulo', $titulo.val());
+	sessionStorage.setItem('url', $url.val());
+}, 1000);
+
+function mostrarFormulario (g) {
+	g.preventDefault();//Con esto sustituimos el return
+	g.stopPropagation(); //Evita la propagacion de una funcion---nose de que tipo
 	//slideToggle Desoculta y oculta un tag
 	$form.slideToggle();
 	/*return false; al retornar false hace que nuestro diseño
 	no se mueva hacia arria acausa de un href="#"*/
 	$list.slideToggle();
-	return false;
+
+	//return false;
 }
-function agregarPost(){
+function agregarPost(e){
+	//e.preventDefault();//Con esto sustituimos el return
 	var url = $url.val(),//sera igaul al contenido del campo url
 		titulo = $titulo.val(),//sera igual al contenido del campo titulo
 		//clone() nos clona el elemento que le decimos, o primer clon
@@ -34,7 +50,7 @@ function agregarPost(){
 	/*append agrega el clon al final*/
 	$list.prepend(clone);
 
-	mostrarFormulario()
+	mostrarFormulario(e)
     /*Limpiamos los campos*/
     $titulo.val('');
     $url.val('');
@@ -44,12 +60,32 @@ function agregarPost(){
 	//$clone.fadeIn();
 	/*return false; Con este evitamos que la pagina se recargue para intentar
 	enviar los datos*/
-	return false;
+	//return false;
+	$('#publicar_nav a').toggleClass('disabled');
 }
+$('nav').on('click', function(){ console.log("Soy un nav y me hicieron click")});
+$('nav ul').on('click', function(){ console.log("Soy un ul y me hicieron click")});
 //Eventos
 $button.click(mostrarFormulario);
 $form.on("submit", agregarPost);
+//	.find('#url')
+/* el focus se activa cuando sleccionamos la accion*/
+//	.on('focus', function(){
+//		$('#url').val('http://')
+//	})
+/*blur es el contrario de focus */
+//	.on('blur', function(){
+//		$('#url').val('')
+//	});
 
 /*$('h1').html('Hola como estas'); Esto hace que se modifique el html
 de la propiedad que hemos elegido pddemos agregar tambien etiquetas*/
 /*document.cookie = "nombre = benjamin" crea una cookie*/
+
+/*Para hacer el cambio de clase en algun boton o algo seria de la siguiente
+manera:*/
+$(function(){
+	$('#publicar_nav a').on('click', function(){
+		$(this).toggleClass('disabled');
+	})
+})

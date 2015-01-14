@@ -188,6 +188,11 @@ nav ul #publicar_nav a:hover:before{
 	font-size: 20px;
 	-webkit-transition: .3s;
 }
+nav ul #publicar_nav a.disabled {
+	background-color: grey;
+	cursor: default;
+	box-shadow: none;
+}
 nav ul li a:hover
 {
 	background: #343B54;

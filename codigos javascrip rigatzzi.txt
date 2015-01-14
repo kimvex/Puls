@@ -55,3 +55,43 @@ para guardar información con Storage se haria de la siguiente manera:
 variable.setItem('nombre', 'benjamin');
 para eliminar un registro del storage es de la siguiente forma:
 variable.removeItem('edad')
+
+
+Creando objetos en JSON:
+
+var benjamin = {
+	"nombre": "benjamin",
+	"apellido": "De la cruz",
+	"nacionalidad": "Mexicano",
+	"edad": "20"
+}
+
+Eso es un objeto JSON valido.
+
+Un texto lo podemos convertir a un objeto JSON de la siguiente forma
+
+var texto = '"nombre":"benjamin","apellido":"De la cruz","nacionalidad":Mexicano","edad": "20"';
+
+benjamin = JSON.parse(texto);
+
+
+Para convertir un objeto en en texto seria de la siguiente forma:
+texto = JSON.stringify(benjamin)
+
+Para poder engañar a localStotage y poder ingresar un objeto seria de la siguiente forma:
+
+localStorage.benjamin = JSON.stringify(benjamin)
+
+Y para poder convertir el storage a un objeto seria de la siguiente manera:
+benjamin = JSON.parse(localStorage.benjamin)
+
+
+Para que el javaScrip sea estricto en su forma de declarar todo se puede usar:
+"use strict"
+
+Para no usar return e impedir que el evento de lo que hallamos hecho se usaria:
+Predeterminado por Jquery:
+evento.preventDefault(); 
+En este caso el codigo que hace el trabajo es preventDefault() diciendo que lo que deberia hacer tal cosa no lo haga.
+
+todo en javaScript es un objeto
